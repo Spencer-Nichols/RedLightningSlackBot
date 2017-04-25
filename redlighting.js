@@ -48,3 +48,12 @@ RedLighting.prototype._onStart = function() {
     this._loadBotUser();
     this._firstRunCheck();
 };
+
+//on load function
+RedLighting.prototype._onLoadBotUser = function () {
+    var self = this;
+    this.user = this.users.filters(function (user) {
+        return user.name == self.name;
+
+    })[0];
+};
