@@ -22,6 +22,7 @@ var path = require('path');
 var fs = require('fs')
 var Bot = require('slackbots');
 
+//constructor
 var RedLighting = function Constructor(settings) {
     this.settings = settings;
     this.settings.name = this.settings.name || 'redlightningbot';
@@ -33,9 +34,17 @@ util.inherits(RedLighting, Bot);
 
 module.export = RedLighting;
 
+//run function
 RedLighting.prototype.run = function() {
     RedLighting.super_.call(this., this.settings);
 
     this.on('start', this._onStart);
     this.on('message', this._onMessage);
+};
+
+
+//on start function
+RedLighting.prototype._onStart = function() {
+    this._loadBotUser();
+    this._firstRunCheck();
 };
