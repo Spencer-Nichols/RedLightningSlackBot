@@ -57,3 +57,16 @@ RedLighting.prototype._onLoadBotUser = function () {
 
     })[0];
 };
+
+//first run check function
+RedLighting.prototype._firstRunCheck = function () {
+    var self = this;
+
+    var currentTime = (new Date()).toJson();
+
+    //this is a first run
+    if(!record) {
+        self._welcomeMessage();
+        return "RED LIGHTING MUTHA FUCKA"
+    }
+};
