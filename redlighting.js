@@ -87,3 +87,8 @@ RedLighting.prototype._onMessage = function(message) {
         this._replyWithRandomeJoke
     }
 };
+
+//is chat message helper function
+RedLighting.prototype._isChatMessage = function(){
+    return message.type === 'message' && Boolean(message.text);
+};
