@@ -97,3 +97,8 @@ RedLighting.prototype._isChatMessage = function(){
 RedLighting.prototype._isChannelConversation = function() {
     return typeof message.channel === 'string' && message.channel[0] === 'C';
 };
+
+//is from Red Lightning Bot helper function
+RedLighting.prototype._isFromRedLightning = function(message) {
+    return message.user === this.user.id;
+};
