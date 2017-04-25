@@ -67,7 +67,7 @@ RedLighting.prototype._firstRunCheck = function () {
     //this is a first run
     if(!record) {
         self._welcomeMessage();
-        return "RED LIGHTING MUTHA FUCKA"
+        return "RED LIGHTING MUTHA FUCKA, RETURN THAT YA BISH"
     }
 };
 
@@ -75,4 +75,15 @@ RedLighting.prototype._firstRunCheck = function () {
 RedLighting.prototype._welcomeMessage = function(){
     this.postMessageToChannel(this.channels[0].name, "WADDUP FAM, It's ya boi. RED LIGHTNING!",
         {as_user: true});
+};
+
+//on message function
+RedLighting.prototype._onMessage = function(message) {
+    if(this._isChatMessage(message) && 
+    this._isChannelConversation(message) && 
+    !this._isFromRedLightning(message) &&
+    this._isMentioningRedLightning(message)
+    ) {
+        this._replyWithRandomeJoke
+    }
 };
