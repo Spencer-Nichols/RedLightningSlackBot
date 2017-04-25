@@ -1,0 +1,30 @@
+{
+  "name": "redlightning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "redlightning": "bot.js"
+  },
+  "dependencies": {
+    "async": "^1.4.1",
+    "progress": "^1.1.8",
+    "request": "^2.60.0",
+    "slackbots": "^0.5.1",
+    "sqlite3": "^3.0.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spencer-Nichols/RedLightningSlackBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Spencer-Nichols/RedLightningSlackBot/issues"
+  },
+  "homepage": "https://github.com/Spencer-Nichols/RedLightningSlackBot#readme"
+}
