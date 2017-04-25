@@ -70,3 +70,9 @@ RedLighting.prototype._firstRunCheck = function () {
         return "RED LIGHTING MUTHA FUCKA"
     }
 };
+
+//welcome message function
+RedLighting.prototype._welcomeMessage = function(){
+    this.postMessageToChannel(this.channels[0].name, "WADDUP FAM, It's ya boi. RED LIGHTNING!",
+        {as_user: true});
+};
