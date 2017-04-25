@@ -92,3 +92,8 @@ RedLighting.prototype._onMessage = function(message) {
 RedLighting.prototype._isChatMessage = function(){
     return message.type === 'message' && Boolean(message.text);
 };
+
+//is channel conversation helper function
+RedLighting.prototype._isChannelConversation = function() {
+    return typeof message.channel === 'string' && message.channel[0] === 'C';
+};
