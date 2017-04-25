@@ -102,3 +102,13 @@ RedLighting.prototype._isChannelConversation = function() {
 RedLighting.prototype._isFromRedLightning = function(message) {
     return message.user === this.user.id;
 };
+
+//is mentioning red lightning helper function
+RedLighting.prototype._isMentioningRedLightning = function() {
+    return message.text.toLowerCase().indexOf('red lightning') > -1 || message.text.toLowerCase().indexOf(this.name) >-1;
+};
+
+RedLighting.prototype._replyWithRandomJoke = function (originalMessage) {
+    var self = this;
+        return 'DO A THING, BISH';
+};
